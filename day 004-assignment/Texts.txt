@@ -1,0 +1,70 @@
+######################
+######          HEADER SECTION TEXTS 
+######################
+#### logo texts
+
+Agency
+
+ 
+######################
+NAVLINKS TEXTS 
+######################
+
+
+pricing
+about
+learn
+corprate
+news
+
+######################
+SECONDARY CALL TO ACTION
+######################
+
+contact us
+
+
+######################
+#####         SHOWCASE SECTION
+######################
+
+######################
+## heading h1 texts
+######################
+
+We create digital product and solve your problem
+
+
+######################
+## paragraph texts 
+######################
+
+A fully intergrated digital agency that will help you create beautifu websites and solve the problems in your company
+
+######################
+## button texts
+######################
+
+get started
+learn more
+
+
+######################
+## Statistics
+######################
+
+## h3 -->   2.5k+
+## p -->    Job done sucessfully
+
+## h3 -->  2.2k+
+## p --> Happy Clents
+
+## h3 --> 2k+
+## p -->  Daily Active Engaments
+
+## h3 -->  58+
+## p -->  Trusted by Comanies
+
+
+
+The services we can render

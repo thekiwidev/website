@@ -1,0 +1,16 @@
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
+
+@mixin section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+
+  h6 {
+    color: $yellow-600;
+    font-weight: bolder;
+  }
+}
