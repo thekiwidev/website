@@ -388,6 +388,7 @@
                   <a href="#">help center</a>
                   <a href="#">blog</a>
                   <a href="#">terms & condition</a>
+                  <a href="#">credits</a>
                 </div>
               </div>
               <div class="links links-container">
@@ -425,11 +426,14 @@
 
       const cursor = document.getElementById("cursor");
       const hoverArray = [];
-      const links = document.querySelectorAll("a");
       const h1s = document.querySelectorAll("h1");
       const h2s = document.querySelectorAll("h2");
+      const h3s = document.querySelectorAll("h3");
+      const h4s = document.querySelectorAll("h4");
       const h5s = document.querySelectorAll("h5");
       const h6s = document.querySelectorAll("h6");
+      const ps = document.querySelectorAll("p");
+      const links = document.querySelectorAll("a");
       const btns = document.querySelectorAll("button");
 
       links.forEach((link) => {
@@ -441,6 +445,12 @@
       h2s.forEach((h2) => {
         hoverArray.push(h2);
       });
+      h3s.forEach((h3) => {
+        hoverArray.push(h3);
+      });
+      h4s.forEach((h4) => {
+        hoverArray.push(h4);
+      });
       h5s.forEach((h5) => {
         hoverArray.push(h5);
       });
@@ -450,6 +460,12 @@
       btns.forEach((btn) => {
         hoverArray.push(btn);
       });
+      ps.forEach((p) => {
+        hoverArray.push(p);
+      });
+      // btns.forEach((btn) => {
+      //   hoverArray.push(btn);
+      // });
 
       document.addEventListener("mousemove", (e) => {
         cursor.setAttribute(

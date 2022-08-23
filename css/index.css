@@ -5,8 +5,8 @@
   border: 1px solid #fff;
   background: none;
   position: absolute;
-  -webkit-transition: 0.3s all ease-out;
-  transition: 0.3s all ease-out;
+  -webkit-transition: 0.15s all ease-out;
+  transition: 0.15s all ease-out;
   z-index: 999;
   mix-blend-mode: difference;
   pointer-events: none;
@@ -556,15 +556,16 @@ body {
 }
 
 .wrapper section.products .container .product a {
-  font-weight: 500;
-  text-decoration: underline;
+  font-weight: 600;
   color: #6c757d;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
 
 .wrapper section.products .container .product a:hover {
-  color: #212529;
+  text-decoration: underline;
+  color: #121315;
+  font-weight: 700;
 }
 
 .wrapper section.products .container .product.product-one {
