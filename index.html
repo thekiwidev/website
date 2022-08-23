@@ -12,9 +12,8 @@
       <header class="main-header">
         <div class="content">
           <div class="logo">
-            <img src="./assets/imgs/agency-logo-white.png" alt="logo" /><span
-              >Agency</span
-            >
+            <img src="./assets/imgs/agency-logo-white.png" alt="logo" />
+            <a href="#">agency</a>
           </div>
           <nav>
             <ul class="navlinks">
@@ -366,7 +365,7 @@
             <div class="company">
               <div class="logo">
                 <img src="./assets/imgs/agency-logo-white.png" alt="logo" />
-                <span>agency</span>
+                <a href="#">agency</a>
               </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
@@ -423,6 +422,50 @@
 
     <script>
       document.querySelector("video").playbackRate = 0.5;
+
+      const cursor = document.getElementById("cursor");
+      const hoverArray = [];
+      const links = document.querySelectorAll("a");
+      const h1s = document.querySelectorAll("h1");
+      const h2s = document.querySelectorAll("h2");
+      const h5s = document.querySelectorAll("h5");
+      const h6s = document.querySelectorAll("h6");
+      const btns = document.querySelectorAll("button");
+
+      links.forEach((link) => {
+        hoverArray.push(link);
+      });
+      h1s.forEach((h1) => {
+        hoverArray.push(h1);
+      });
+      h2s.forEach((h2) => {
+        hoverArray.push(h2);
+      });
+      h5s.forEach((h5) => {
+        hoverArray.push(h5);
+      });
+      h6s.forEach((h6) => {
+        hoverArray.push(h6);
+      });
+      btns.forEach((btn) => {
+        hoverArray.push(btn);
+      });
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.setAttribute(
+          "style",
+          `top: ${e.pageY - 13}px; left:${e.pageX - 13}px;`
+        );
+      });
+
+      hoverArray.forEach((item) => {
+        item.addEventListener("mouseover", () => {
+          cursor.classList.add("grow");
+        });
+        item.addEventListener("mouseleave", () => {
+          cursor.classList.remove("grow");
+        });
+      });
     </script>
   </body>
 </html>
