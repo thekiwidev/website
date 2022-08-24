@@ -42,4 +42,29 @@
       transform: translate(0%, 0%);
     }
   }
+
+  &.ripple {
+    transform: scale(1.5);
+
+    animation: cursorAnim 0.2s ease-in-out infinite alternate;
+
+    &::after {
+      width: 50%;
+      height: 50%;
+
+      transform: translate(50%, 50%);
+    }
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+
+  to {
+    transform: scale(1.6);
+    opacity: 1;
+  }
 }

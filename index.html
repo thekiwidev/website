@@ -17,10 +17,10 @@
           </div>
           <nav>
             <ul class="navlinks">
-              <a href="#">portfolio</a>
-              <a href="#">about</a>
-              <a href="#">learn</a>
-              <a href="#">corprate</a>
+              <a href="#services">services</a>
+              <a href="#catalog">catalog</a>
+              <a href="#how-it-works">learn</a>
+              <a href="#about">about</a>
               <a href="#">news</a>
             </ul>
             <button class="secondary-btn btn">contact us</button>
@@ -148,7 +148,7 @@
           </div>
         </div>
       </section>
-      <section class="products">
+      <section id="catalog" class="products">
         <div class="container">
           <header class="products-header">
             <span class="stroke"></span>
@@ -214,7 +214,7 @@
           </div>
         </div>
       </section>
-      <section class="how-it-works">
+      <section id="how-it-works" class="how-it-works">
         <div class="container">
           <div class="img">
             <img src="./assets/imgs/planning.jpg" alt="we plan" />
@@ -421,67 +421,6 @@
       </footer>
     </div>
 
-    <script>
-      document.querySelector("video").playbackRate = 0.5;
-
-      const cursor = document.getElementById("cursor");
-      const hoverArray = [];
-      const h1s = document.querySelectorAll("h1");
-      const h2s = document.querySelectorAll("h2");
-      const h3s = document.querySelectorAll("h3");
-      const h4s = document.querySelectorAll("h4");
-      const h5s = document.querySelectorAll("h5");
-      const h6s = document.querySelectorAll("h6");
-      const ps = document.querySelectorAll("p");
-      const links = document.querySelectorAll("a");
-      const btns = document.querySelectorAll("button");
-
-      links.forEach((link) => {
-        hoverArray.push(link);
-      });
-      h1s.forEach((h1) => {
-        hoverArray.push(h1);
-      });
-      h2s.forEach((h2) => {
-        hoverArray.push(h2);
-      });
-      h3s.forEach((h3) => {
-        hoverArray.push(h3);
-      });
-      h4s.forEach((h4) => {
-        hoverArray.push(h4);
-      });
-      h5s.forEach((h5) => {
-        hoverArray.push(h5);
-      });
-      h6s.forEach((h6) => {
-        hoverArray.push(h6);
-      });
-      btns.forEach((btn) => {
-        hoverArray.push(btn);
-      });
-      ps.forEach((p) => {
-        hoverArray.push(p);
-      });
-      // btns.forEach((btn) => {
-      //   hoverArray.push(btn);
-      // });
-
-      document.addEventListener("mousemove", (e) => {
-        cursor.setAttribute(
-          "style",
-          `top: ${e.pageY - 13}px; left:${e.pageX - 13}px;`
-        );
-      });
-
-      hoverArray.forEach((item) => {
-        item.addEventListener("mouseover", () => {
-          cursor.classList.add("grow");
-        });
-        item.addEventListener("mouseleave", () => {
-          cursor.classList.remove("grow");
-        });
-      });
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
