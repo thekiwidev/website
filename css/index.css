@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap");
-body {
-  cursor: none;
-}
-
 #cursor {
   width: 32px;
   height: 32px;
@@ -100,15 +96,6 @@ body {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
     opacity: 1;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #cursor {
-    display: none;
-  }
-  body {
-    cursor: initial;
   }
 }
 

@@ -70,3 +70,23 @@ document.addEventListener("scroll", () => {
     `top: ${e.pageY - 13}px; left:${e.pageX - 13}px; position: fixed;`
   );
 });
+
+// if(navigator.userAgent.match())
+
+// /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+if (navigator.userAgent.match(/Android/i)) {
+  console.log("Android");
+  document.querySelector("body").style.cursor = "none";
+  cursor.style.display = "none";
+} else if (navigator.userAgent.match(/iPhone/i)) {
+  console.log("iPhone");
+  document.querySelector("body").style.cursor = "none";
+  cursor.style.display = "none";
+} else if (navigator.userAgent.match(/iPad/i)) {
+  console.log("iPad");
+  document.querySelector("body").style.cursor = "none";
+  cursor.style.display = "none";
+} else {
+  console.log("desktop");
+  document.querySelector("body").style.cursor = "none";
+}
