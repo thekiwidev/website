@@ -572,8 +572,9 @@ body {
       margin-bottom: 4rem;
 
       @media only screen and (max-width: 850px) {
-        width: 80%;
+        width: 100%;
         margin: 0 auto 4rem;
+        padding: 0 2rem;
         text-align: center;
       }
     }
