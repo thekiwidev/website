@@ -18,6 +18,9 @@
 
   pointer-events: none;
 
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
   &::after {
     display: block;
     width: 30%;

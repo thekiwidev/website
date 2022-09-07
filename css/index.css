@@ -13,6 +13,12 @@
   pointer-events: none;
 }
 
+@media only screen and (max-width: 500px) {
+  #cursor {
+    display: none;
+  }
+}
+
 #cursor::after {
   display: block;
   width: 30%;
