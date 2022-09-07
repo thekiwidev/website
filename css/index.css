@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap");
 #cursor {
   width: 32px;
   height: 32px;
@@ -1087,7 +1088,7 @@ body {
 
 .wrapper section.testimonials .testimonies .testimony .clients-details h4 {
   font-size: 1.4rem;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 0.5rem;
 }
 
