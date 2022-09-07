@@ -1,5 +1,3 @@
-document.querySelector("video").playbackRate = 0.5;
-
 const cursor = document.getElementById("cursor");
 const hoverArray = [];
 const interactiveArray = [];
@@ -64,4 +62,11 @@ interactiveArray.forEach((item) => {
   item.addEventListener("mouseleave", () => {
     cursor.classList.remove("ripple");
   });
+});
+
+document.addEventListener("scroll", () => {
+  cursor.setAttribute(
+    "style",
+    `top: ${e.pageY - 13}px; left:${e.pageX - 13}px; position: fixed;`
+  );
 });
