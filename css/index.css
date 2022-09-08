@@ -231,10 +231,7 @@ a:hover {
   text-decoration: none;
   font-family: "Karla", "Poppins", "Montserrat", Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
-}
-
-* img {
-  width: 100%;
+  max-width: 100%;
 }
 
 ::-webkit-scrollbar {
