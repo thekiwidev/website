@@ -358,63 +358,61 @@ body {
 }
 
 .wrapper section.info {
+  height: 100vh;
+  background: repeating-linear-gradient(-45deg, #121315 10%, #495057 55%);
+}
+
+.wrapper section.info .container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 30rem;
-  padding-top: 5rem;
-  background: repeating-linear-gradient(-45deg, #121315 10%, #495057 55%);
   color: #fff;
+  position: relative;
 }
 
 @media only screen and (max-width: 850px) {
-  .wrapper section.info {
+  .wrapper section.info .container {
     margin-bottom: 15rem;
   }
 }
 
-.wrapper section.info .texts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 80%;
+.wrapper section.info .container .texts {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   margin: 3rem auto;
-  text-align: center;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 850px) {
-  .wrapper section.info .texts {
+  .wrapper section.info .container .texts {
     width: 100%;
   }
 }
 
-.wrapper section.info .texts p {
+.wrapper section.info .container .texts h1 {
+  max-width: 820px;
+}
+
+.wrapper section.info .container .texts p {
   width: 50%;
-  margin-inline: auto;
   color: #f8f9fa;
 }
 
 @media only screen and (max-width: 850px) {
-  .wrapper section.info .texts p {
+  .wrapper section.info .container .texts p {
     width: 80%;
   }
 }
 
-.wrapper section.info .texts .call-to-action {
+.wrapper section.info .container .texts .call-to-action {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,77 +420,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.wrapper section.info .texts .call-to-action a {
+.wrapper section.info .container .texts .call-to-action a {
   color: #fff;
   text-transform: capitalize;
 }
 
-.wrapper section.info .texts .call-to-action a:hover {
+.wrapper section.info .container .texts .call-to-action a:hover {
   text-decoration: underline;
 }
 
-.wrapper section.info .video {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: -30%;
-}
-
-.wrapper section.info .video video {
-  display: block;
-  width: 100%;
-  margin-inline: auto;
-  margin-bottom: 2rem;
-  border: 3px solid #495057;
-  position: relative;
-}
-
-.wrapper section.info .video video::before {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: #000;
-  -webkit-box-shadow: 8px 8px 0 #0d0d0d;
-          box-shadow: 8px 8px 0 #0d0d0d;
-  z-index: 1;
-}
-
-.wrapper section.info .video .stats {
-  width: 100%;
-  margin-inline: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  color: #000;
-  text-align: center;
-}
-
-@media only screen and (max-width: 850px) {
-  .wrapper section.info .video .stats {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    gap: 0 3rem;
-  }
+.wrapper section.info .container img {
+  position: absolute;
+  width: 45%;
+  right: 5%;
+  top: 27%;
 }
 
 .wrapper section.services header.services-header {
