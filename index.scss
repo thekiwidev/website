@@ -147,6 +147,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+
       color: $white;
 
       position: relative;
@@ -166,11 +167,13 @@ body {
         }
 
         h1 {
+          width: 100%;
           max-width: 820px;
         }
 
         p {
-          width: 50%;
+          width: 100%;
+          max-width: 450px;
           color: $gray-100;
 
           @media only screen and (max-width: 850px) {
@@ -196,9 +199,9 @@ body {
 
       img {
         position: absolute;
-        width: 45%;
+        width: 35%;
         right: 5%;
-        top: 27%;
+        top: 23.5%;
       }
     }
   }
