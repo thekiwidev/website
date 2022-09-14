@@ -1,7 +1,7 @@
 //=============================
 // ## imports
 //=============================
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap");
 
 @import "./scss/variables";
 @import "./scss/cursor";
@@ -104,6 +104,9 @@ body {
         @media only screen and (max-width: 1024px) {
           flex: 5;
         }
+        @media only screen and (max-width: 850px) {
+          display: none;
+        }
 
         display: flex;
         align-items: center;
@@ -149,12 +152,15 @@ body {
       align-items: center;
       justify-content: center;
 
+      padding: 2rem;
+
       color: $white;
 
       position: relative;
 
       @media only screen and (max-width: 850px) {
-        margin-bottom: 15rem;
+        // margin-bottom: 15rem;
+        align-items: flex-end;
       }
 
       .texts {
@@ -165,6 +171,7 @@ body {
 
         @media only screen and (max-width: 850px) {
           width: 100%;
+          margin: 0;
         }
 
         p {
@@ -176,6 +183,9 @@ body {
 
           @media only screen and (max-width: 850px) {
             width: 80%;
+          }
+          @media only screen and (max-width: 500px) {
+            width: 100%;
           }
         }
 
@@ -195,11 +205,32 @@ body {
         }
       }
 
-      img {
+      .media {
+        width: 100%;
+        height: 100%;
+
         position: absolute;
-        width: 500px;
-        right: 5%;
-        top: 23.5%;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: 850px) {
+          align-items: flex-start;
+        }
+      }
+
+      img {
+        width: 45%;
+        margin-right: 5%;
+
+        @media only screen and (max-width: 850px) {
+          width: 80%;
+          margin-top: 15%;
+          margin-right: 10%;
+        }
       }
     }
   }

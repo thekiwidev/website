@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap");
 #cursor {
   width: 32px;
   height: 32px;
@@ -169,6 +168,12 @@ h2 {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  h2 {
+    font-size: 2.1rem;
+  }
+}
+
 h3 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -334,6 +339,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 850px) {
+  .wrapper header.main-header .content nav {
+    display: none;
+  }
+}
+
 .wrapper header.main-header .content nav .navlinks {
   -webkit-box-flex: 2;
       -ms-flex: 2;
@@ -369,13 +380,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 2rem;
   color: #fff;
   position: relative;
 }
 
 @media only screen and (max-width: 850px) {
   .wrapper section.info .container {
-    margin-bottom: 15rem;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -390,6 +404,7 @@ body {
 @media only screen and (max-width: 850px) {
   .wrapper section.info .container .texts {
     width: 100%;
+    margin: 0;
   }
 }
 
@@ -403,6 +418,12 @@ body {
 @media only screen and (max-width: 850px) {
   .wrapper section.info .container .texts p {
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper section.info .container .texts p {
+    width: 100%;
   }
 }
 
@@ -425,11 +446,42 @@ body {
   text-decoration: underline;
 }
 
-.wrapper section.info .container img {
+.wrapper section.info .container .media {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  width: 500px;
-  right: 5%;
-  top: 23.5%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media only screen and (max-width: 850px) {
+  .wrapper section.info .container .media {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.wrapper section.info .container img {
+  width: 45%;
+  margin-right: 5%;
+}
+
+@media only screen and (max-width: 850px) {
+  .wrapper section.info .container img {
+    width: 80%;
+    margin-top: 15%;
+    margin-right: 10%;
+  }
 }
 
 .wrapper section.services header.services-header {
