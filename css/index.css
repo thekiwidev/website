@@ -426,6 +426,8 @@ body {
   border-radius: 5rem;
   background: #fff;
   margin-bottom: 4px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .wrapper header.main-header .content button.menu .text {

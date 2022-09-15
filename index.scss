@@ -8,7 +8,6 @@
 @import "./scss/utilities";
 @import "./scss/mixins";
 @import "./scss/type";
-@import "./scss/menu";
 
 // resets
 * {
@@ -187,6 +186,8 @@ body {
 
           background: $white;
           margin-bottom: 4px;
+
+          transition: all 0.3s linear;
         }
 
         .text {
