@@ -257,14 +257,12 @@ section {
 }
 
 body {
-  max-width: 100vw;
   overflow-x: hidden;
   background: #dee2e6;
 }
 
 .wrapper {
   width: 100%;
-  overflow-x: hidden;
 }
 
 .wrapper header.main-header {
@@ -284,8 +282,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
   max-width: 1920px;
   margin: auto;
+  overflow: hidden;
   color: #fff;
   padding: 1rem 1.5rem;
 }
@@ -352,22 +352,22 @@ body {
 
 @media only screen and (max-width: 850px) {
   .wrapper header.main-header .content nav {
-    -webkit-transition: right 0.3s ease-in-out;
-    transition: right 0.3s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
     width: 100%;
-    right: -100%;
-    top: 0;
+    right: 0;
+    top: -900%;
     padding: 10rem 1rem 5rem;
     height: 100vh;
     background: #343a40;
   }
   .wrapper header.main-header .content nav.open {
-    right: 0;
+    top: 0;
   }
 }
 
