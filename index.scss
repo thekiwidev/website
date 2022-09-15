@@ -8,6 +8,7 @@
 @import "./scss/utilities";
 @import "./scss/mixins";
 @import "./scss/type";
+@import "./scss/menu";
 
 // resets
 * {
@@ -65,7 +66,7 @@ body {
     position: absolute;
     width: 100%;
 
-    z-index: 5;
+    z-index: 10;
 
     .content {
       display: flex;
@@ -88,6 +89,13 @@ body {
 
         cursor: pointer;
 
+        z-index: 1;
+
+        @media only screen and (max-width: 850px) {
+          flex: 1;
+          display: none;
+        }
+
         img {
           width: 50px;
         }
@@ -105,11 +113,12 @@ body {
           flex: 5;
         }
         @media only screen and (max-width: 850px) {
+          transition: right 0.3s ease-in-out;
           flex-direction: column;
 
-          position: fixed;
+          position: absolute;
           width: 100%;
-          right: 0;
+          right: -100%;
           top: 0;
 
           padding: 5rem 1rem;
@@ -117,6 +126,10 @@ body {
           height: 100vh;
 
           background: $gray-800;
+
+          &.open {
+            right: 0;
+          }
         }
 
         display: flex;
@@ -147,6 +160,63 @@ body {
               text-decoration: underline $green;
             }
           }
+        }
+      }
+      button.menu {
+        outline: none;
+        background: none;
+        border: none;
+
+        position: absolute;
+        top: 20%;
+        right: 3%;
+
+        padding: 1rem;
+
+        transition: all 0.3s linear;
+
+        z-index: 5;
+
+        cursor: pointer;
+
+        .stroke {
+          width: 32px;
+          height: 3px;
+
+          border-radius: 5rem;
+
+          background: $white;
+          margin-bottom: 4px;
+        }
+
+        .text {
+          font-size: 0.7rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          line-height: 1;
+
+          color: $white;
+        }
+
+        &.open {
+          top: 20%;
+          .stroke {
+            &:first-of-type {
+              background-color: red;
+              transform: rotate(45deg) translate(0px, -1px);
+            }
+            &:nth-child(2) {
+              background: $white;
+              transform: rotate(-45deg) translate(6px, -6px);
+            }
+          }
+          .text {
+            color: $white;
+          }
+        }
+
+        @media only screen and (min-width: 851px) {
+          display: none;
         }
       }
     }
@@ -237,7 +307,9 @@ body {
         justify-content: flex-end;
 
         @media only screen and (max-width: 850px) {
-          align-items: flex-start;
+          align-items: center;
+          justify-content: start;
+          flex-direction: column;
         }
       }
 
@@ -249,7 +321,6 @@ body {
         @media only screen and (max-width: 850px) {
           width: 60%;
           margin-top: 15%;
-          margin-right: 10%;
         }
         @media only screen and (max-width: 500px) {
           width: 80%;
