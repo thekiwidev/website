@@ -473,8 +473,9 @@ body {
 }
 
 .wrapper section.info .container img {
-  width: 45%;
+  width: 40%;
   margin-right: 5%;
+  margin-top: 5%;
 }
 
 @media only screen and (max-width: 850px) {
