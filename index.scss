@@ -228,9 +228,12 @@ body {
         margin-top: 5%;
 
         @media only screen and (max-width: 850px) {
-          width: 80%;
+          width: 60%;
           margin-top: 15%;
           margin-right: 10%;
+        }
+        @media only screen and (max-width: 500px) {
+          width: 80%;
         }
       }
     }

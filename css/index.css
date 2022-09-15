@@ -480,9 +480,15 @@ body {
 
 @media only screen and (max-width: 850px) {
   .wrapper section.info .container img {
-    width: 80%;
+    width: 60%;
     margin-top: 15%;
     margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper section.info .container img {
+    width: 80%;
   }
 }
 
