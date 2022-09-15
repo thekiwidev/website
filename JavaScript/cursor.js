@@ -40,13 +40,6 @@ ps.forEach((p) => {
   hoverArray.push(p);
 });
 
-document.addEventListener("mousemove", (e) => {
-  cursor.setAttribute(
-    "style",
-    `top: ${e.pageY - 13}px; left:${e.pageX - 13}px;`
-  );
-});
-
 hoverArray.forEach((item) => {
   item.addEventListener("mouseover", () => {
     cursor.classList.add("grow");
@@ -77,16 +70,21 @@ document.addEventListener("scroll", () => {
 if (navigator.userAgent.match(/Android/i)) {
   console.log("Android");
   document.querySelector("body").style.cursor = "none";
-  cursor.style.display = "none";
+  console.log(cursor);
 } else if (navigator.userAgent.match(/iPhone/i)) {
   console.log("iPhone");
-  document.querySelector("body").style.cursor = "none";
   cursor.style.display = "none";
 } else if (navigator.userAgent.match(/iPad/i)) {
   console.log("iPad");
-  document.querySelector("body").style.cursor = "none";
   cursor.style.display = "none";
 } else {
   console.log("desktop");
   document.querySelector("body").style.cursor = "none";
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.setAttribute(
+      "style",
+      `top: ${e.pageY - 13}px; left:${e.pageX - 13}px;`
+    );
+  });
 }
