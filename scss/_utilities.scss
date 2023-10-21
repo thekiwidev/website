@@ -1,6 +1,6 @@
+@import "./variables";
 .btn {
   outline: none;
-  border: 1px solid $gray-100;
 
   padding: 0.8rem 2.2rem;
 
@@ -13,6 +13,7 @@
 
   &.primary-btn {
     background: $white;
+    border: 1px solid $green;
 
     color: $black;
     font-weight: 800;
@@ -20,8 +21,10 @@
     position: relative;
     overflow: hidden;
 
+    box-shadow: -5px 5px 0 $green;
+
     &:hover {
-      background: $green;
+      background: $gray-900;
       color: $white;
     }
   }
@@ -35,14 +38,16 @@
     position: relative;
     overflow: hidden;
 
+    box-shadow: -5px 5px 0 $gray-300;
+
     &:hover {
       background: $green;
     }
   }
 
-  &:hover {
-    cursor: pointer;
-  }
+  // &:hover {
+  //   cursor: pointer;
+  // }
 }
 
 span.stroke {
