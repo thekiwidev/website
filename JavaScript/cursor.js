@@ -69,7 +69,8 @@ document.addEventListener("scroll", () => {
 // /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
 if (navigator.userAgent.match(/Android/i)) {
   console.log("Android");
-  document.querySelector("body").style.cursor = "none";
+  // document.querySelector("body").style.cursor = "none";
+  cursor.style.display = "none";
   console.log(cursor);
 } else if (navigator.userAgent.match(/iPhone/i)) {
   console.log("iPhone");
@@ -79,7 +80,7 @@ if (navigator.userAgent.match(/Android/i)) {
   cursor.style.display = "none";
 } else {
   console.log("desktop");
-  document.querySelector("body").style.cursor = "none";
+  // document.querySelector("body").style.cursor = "none";
 
   document.addEventListener("mousemove", (e) => {
     cursor.setAttribute(
