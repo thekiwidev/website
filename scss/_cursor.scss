@@ -8,7 +8,7 @@
 
   position: absolute;
 
-  transition: 0.3s all ease-out;
+  transition: 0.05s all ease-out;
 
   z-index: 999;
 
@@ -34,6 +34,8 @@
     transform: scale(1.5);
     background: $white;
 
+    // cursor: pointer;
+
     &::after {
       display: none;
     }
@@ -43,6 +45,8 @@
     transform: scale(1.5);
 
     animation: cursorAnim 0.3s ease-in-out infinite alternate;
+
+    // cursor: pointer;
 
     &::after {
       width: 100%;
