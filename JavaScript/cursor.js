@@ -11,6 +11,8 @@ const h6s = document.querySelectorAll("h6");
 const ps = document.querySelectorAll("p");
 const links = document.querySelectorAll("a");
 const btns = document.querySelectorAll("button");
+const bannerImage = document.getElementById("banner-img");
+const logo = document.querySelector(".logo");
 
 links.forEach((link) => {
   interactiveArray.push(link);
@@ -39,15 +41,19 @@ h6s.forEach((h6) => {
 ps.forEach((p) => {
   hoverArray.push(p);
 });
+hoverArray.push(bannerImage);
+hoverArray.push(logo);
 
 hoverArray.forEach((item) => {
   item.addEventListener("mouseover", () => {
     cursor.classList.add("grow");
+    console.log(item);
   });
   item.addEventListener("mouseleave", () => {
     cursor.classList.remove("grow");
   });
 });
+
 interactiveArray.forEach((item) => {
   item.addEventListener("mouseover", () => {
     cursor.classList.add("ripple");
