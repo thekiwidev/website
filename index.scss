@@ -242,15 +242,13 @@ body {
 
       color: $light;
 
-      position: relative;
-
       @media only screen and (max-width: 850px) {
-        // margin-bottom: 15rem;
-        align-items: flex-end;
+        flex-direction: column-reverse;
+        gap: 2rem;
       }
 
       .texts {
-        flex: 2;
+        flex: 0.5;
         margin: 3rem auto;
 
         z-index: 1;
@@ -277,44 +275,22 @@ body {
             width: 100%;
           }
         }
-
-        // .call-to-action {
-        //   display: flex;
-        //   gap: 2rem;
-        //   align-items: center;
-
-        //   a.primary-btn {
-        //     color: $light;
-        //     text-transform: capitalize;
-
-        //     &:hover {
-        //       text-decoration: underline;
-        //     }
-        //   }
-        // }
       }
 
       .media {
+        flex: 0.5;
+
         display: flex;
         align-items: center;
-        justify-content: flex-end;
 
-        @media only screen and (max-width: 850px) {
-          align-items: center;
-          justify-content: start;
-          flex-direction: column;
-        }
-      }
+        border: 1px solid $blue01;
 
-      img#banner-img {
-        width: 90%;
-
-        @media only screen and (max-width: 850px) {
-          width: 60%;
-          margin-top: 15%;
-        }
         @media only screen and (max-width: 500px) {
-          width: 80%;
+          flex: 0.3;
+        }
+
+        img#banner-img {
+          width: 100%;
         }
       }
     }
