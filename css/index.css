@@ -338,7 +338,6 @@ body {
   justify-content: center;
   padding: 2rem;
   color: #f7f7ff;
-  position: relative;
 }
 @media only screen and (max-width: 850px) {
   .wrapper section.info .container {
@@ -383,13 +382,13 @@ body {
   align-items: center;
   border: 1px solid #4ea5d9;
 }
-.wrapper section.info .container .media img#banner-img {
-  width: 100%;
-}
 @media only screen and (max-width: 500px) {
   .wrapper section.info .container .media {
     flex: 0.3;
   }
+}
+.wrapper section.info .container .media img#banner-img {
+  width: 100%;
 }
 .wrapper section.services header.services-header {
   display: flex;

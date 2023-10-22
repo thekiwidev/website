@@ -242,11 +242,7 @@ body {
 
       color: $light;
 
-      position: relative;
-
       @media only screen and (max-width: 850px) {
-        // margin-bottom: 15rem;
-        // align-items: flex-end;
         flex-direction: column-reverse;
         gap: 2rem;
       }
@@ -289,12 +285,12 @@ body {
 
         border: 1px solid $blue01;
 
-        img#banner-img {
-          width: 100%;
-        }
-
         @media only screen and (max-width: 500px) {
           flex: 0.3;
+        }
+
+        img#banner-img {
+          width: 100%;
         }
       }
     }
