@@ -342,7 +342,7 @@ body {
 }
 @media only screen and (max-width: 850px) {
   .wrapper section.info .container {
-    align-items: flex-end;
+    flex-direction: column;
   }
 }
 .wrapper section.info .container .texts {

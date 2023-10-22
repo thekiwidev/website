@@ -246,7 +246,8 @@ body {
 
       @media only screen and (max-width: 850px) {
         // margin-bottom: 15rem;
-        align-items: flex-end;
+        // align-items: flex-end;
+        flex-direction: column;
       }
 
       .texts {
