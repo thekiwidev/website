@@ -3,7 +3,7 @@
   height: 32px;
   border-radius: 50%;
 
-  border: 2px solid $white;
+  border: 2px solid $light;
   background: none;
 
   position: absolute;
@@ -24,7 +24,7 @@
 
     content: "";
 
-    background: $white;
+    background: $light;
     mix-blend-mode: difference;
 
     transform: translate(120%, 120%);
@@ -32,7 +32,7 @@
 
   &.grow {
     transform: scale(1.5);
-    background: $white;
+    background: $light;
 
     // cursor: pointer;
 
