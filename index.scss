@@ -31,7 +31,7 @@
 ::-webkit-scrollbar-thumb {
   width: 0.1rem;
   border-radius: 2rem;
-  background: $blue01;
+  background: $theme02;
 }
 
 section {
@@ -67,6 +67,8 @@ body {
     width: 100%;
 
     z-index: 5;
+
+    padding: 1rem 0;
 
     .content {
       display: flex;
@@ -737,13 +739,106 @@ body {
       border: 1px solid $theme03;
       box-shadow: -6px 6px 0 $theme05;
 
+      @media only screen and (max-width: 850px) {
+        padding: 2rem;
+
+        text-align: center;
+      }
+
       .content {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
+        @media only screen and (max-width: 850px) {
+          flex-direction: column;
+        }
+
         h3 {
           margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+
+  // ======================================================
+  //  CONTACT SECTION
+  // ======================================================
+
+  section.contact-us {
+    .container {
+      header.contact-header {
+        @include section-header;
+      }
+
+      h2 {
+        width: 40%;
+
+        @media only screen and (max-width: 850px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .content {
+        margin-top: 4rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        @media only screen and (max-width: 850px) {
+          flex-direction: column;
+        }
+
+        .illustration {
+          flex: 0.5;
+        }
+
+        .form {
+          flex: 0.5;
+
+          @media only screen and (max-width: 850px) {
+            width: 100%;
+          }
+
+          input,
+          textarea {
+            outline: none;
+
+            font-size: 1rem;
+            padding: 1rem 1rem;
+
+            display: block;
+            width: 80%;
+            margin-inline: auto;
+            margin-bottom: 1rem;
+
+            border: 1px solid $theme05;
+            box-shadow: -4px 4px 0 $theme02;
+
+            @media only screen and (max-width: 850px) {
+              width: 100%;
+            }
+          }
+
+          textarea {
+            height: 150px;
+            resize: none;
+          }
+
+          button {
+            display: block;
+            width: 80%;
+            margin-inline: auto;
+            margin-top: 2.5rem;
+
+            padding: 1.5rem;
+            font-size: 1rem;
+
+            box-shadow: -4px 4px 0 $theme05;
+          }
         }
       }
     }
