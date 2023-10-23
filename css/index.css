@@ -174,7 +174,7 @@ p {
 ::-webkit-scrollbar-thumb {
   width: 0.1rem;
   border-radius: 2rem;
-  background: #4ea5d9;
+  background: #1d1d1d;
 }
 
 section {
@@ -815,6 +815,62 @@ body {
 }
 .wrapper section.testimonials .cta-banner .content h3 {
   margin-bottom: 1.5rem;
+}
+.wrapper section.contact-us .container header.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.wrapper section.contact-us .container header.contact-header h5 {
+  color: #909090;
+  font-weight: bolder;
+}
+@media only screen and (max-width: 850px) {
+  .wrapper section.contact-us .container header.contact-header {
+    justify-content: center;
+  }
+}
+.wrapper section.contact-us .container h2 {
+  width: 40%;
+}
+.wrapper section.contact-us .container .content {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.wrapper section.contact-us .container .content .illustration {
+  flex: 0.5;
+}
+.wrapper section.contact-us .container .content .form {
+  flex: 0.5;
+}
+.wrapper section.contact-us .container .content .form input,
+.wrapper section.contact-us .container .content .form textarea {
+  outline: none;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  display: block;
+  width: 80%;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  border: 1px solid #909090;
+  box-shadow: -4px 4px 0 #1d1d1d;
+}
+.wrapper section.contact-us .container .content .form textarea {
+  height: 150px;
+  resize: none;
+}
+.wrapper section.contact-us .container .content .form button {
+  display: block;
+  width: 80%;
+  margin-inline: auto;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  box-shadow: -4px 4px 0 #909090;
 }
 .wrapper footer {
   padding: 5rem 2rem;
