@@ -201,6 +201,7 @@ body {
   position: absolute;
   width: 100%;
   z-index: 5;
+  padding: 1rem 0;
 }
 .wrapper header.main-header .content {
   display: flex;
@@ -808,10 +809,21 @@ body {
   border: 1px solid #e0e0e0;
   box-shadow: -6px 6px 0 #909090;
 }
+@media only screen and (max-width: 850px) {
+  .wrapper section.testimonials .cta-banner {
+    padding: 2rem;
+    text-align: center;
+  }
+}
 .wrapper section.testimonials .cta-banner .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media only screen and (max-width: 850px) {
+  .wrapper section.testimonials .cta-banner .content {
+    flex-direction: column;
+  }
 }
 .wrapper section.testimonials .cta-banner .content h3 {
   margin-bottom: 1.5rem;
@@ -834,6 +846,12 @@ body {
 .wrapper section.contact-us .container h2 {
   width: 40%;
 }
+@media only screen and (max-width: 850px) {
+  .wrapper section.contact-us .container h2 {
+    width: 100%;
+    text-align: center;
+  }
+}
 .wrapper section.contact-us .container .content {
   margin-top: 4rem;
   display: flex;
@@ -841,11 +859,21 @@ body {
   justify-content: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 850px) {
+  .wrapper section.contact-us .container .content {
+    flex-direction: column;
+  }
+}
 .wrapper section.contact-us .container .content .illustration {
   flex: 0.5;
 }
 .wrapper section.contact-us .container .content .form {
   flex: 0.5;
+}
+@media only screen and (max-width: 850px) {
+  .wrapper section.contact-us .container .content .form {
+    width: 100%;
+  }
 }
 .wrapper section.contact-us .container .content .form input,
 .wrapper section.contact-us .container .content .form textarea {
@@ -858,6 +886,12 @@ body {
   margin-bottom: 1rem;
   border: 1px solid #909090;
   box-shadow: -4px 4px 0 #1d1d1d;
+}
+@media only screen and (max-width: 850px) {
+  .wrapper section.contact-us .container .content .form input,
+  .wrapper section.contact-us .container .content .form textarea {
+    width: 100%;
+  }
 }
 .wrapper section.contact-us .container .content .form textarea {
   height: 150px;
