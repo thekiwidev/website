@@ -649,8 +649,18 @@ body {
 
         padding: 2rem;
 
-        box-shadow: -4px 4px $blue02;
-        border: 1px solid $blue02;
+        box-shadow: -4px 4px $theme02;
+        border: 1px solid $theme02;
+
+        transition: 0.3s ease;
+
+        &:hover {
+          background-color: $theme01;
+          color: $theme04;
+
+          box-shadow: -4px 4px $theme05;
+          box-shadow: -4px 4px $theme05;
+        }
 
         img {
           width: 32px;
@@ -694,6 +704,10 @@ body {
             margin-bottom: 0.5rem;
           }
 
+          p {
+            color: $theme05;
+          }
+
           .ratings {
             display: flex;
             align-items: center;
@@ -705,7 +719,7 @@ body {
             }
             p {
               font-weight: 800;
-              color: $gray-800;
+              color: $theme05;
               margin: 0;
             }
           }

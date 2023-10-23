@@ -736,8 +736,15 @@ body {
   max-width: 400px;
   background: #f7f7ff;
   padding: 2rem;
-  box-shadow: -4px 4px #0b2432;
-  border: 1px solid #0b2432;
+  box-shadow: -4px 4px #1d1d1d;
+  border: 1px solid #1d1d1d;
+  transition: 0.3s ease;
+}
+.wrapper section.testimonials .testimonies .testimony:hover {
+  background-color: #0b0b0b;
+  color: #f9f9f9;
+  box-shadow: -4px 4px #909090;
+  box-shadow: -4px 4px #909090;
 }
 .wrapper section.testimonials .testimonies .testimony img {
   width: 32px;
@@ -775,6 +782,9 @@ body {
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
+.wrapper section.testimonials .testimonies .testimony .clients-details p {
+  color: #909090;
+}
 .wrapper section.testimonials .testimonies .testimony .clients-details .ratings {
   display: flex;
   align-items: center;
@@ -787,7 +797,7 @@ body {
 }
 .wrapper section.testimonials .testimonies .testimony .clients-details .ratings p {
   font-weight: 800;
-  color: #343a40;
+  color: #909090;
   margin: 0;
 }
 .wrapper section.testimonials .cta-banner {
