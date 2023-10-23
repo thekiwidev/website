@@ -12,39 +12,40 @@
   font-weight: 900;
 
   &.primary-btn {
-    background: $light;
-    border: 1px solid $accent;
+    background: $theme03;
+    border: 1px solid $theme03;
 
-    color: $dark;
+    color: $theme01;
     font-weight: 800;
 
     position: relative;
     overflow: hidden;
 
-    box-shadow: -5px 5px 0 $accent;
-    transition: box-shadow 0.05s ease linear;
+    box-shadow: -5px 5px 0 $theme05;
+    transition: all 0.2s linear !important;
 
     &:hover {
-      background: $gray-900;
-      color: $accent;
-      box-shadow: -3px 3px 0 $accent;
+      background: $theme02;
+      color: $theme04;
+      box-shadow: -3px 3px 0 $theme03;
     }
   }
 
   &.secondary-btn {
-    border: 1px solid $accent;
+    border: 1px solid $theme01;
 
-    background: none;
-    color: $light;
+    background: $theme02;
+    color: $theme04;
 
     position: relative;
     overflow: hidden;
 
-    box-shadow: -5px 5px 0 $accent;
+    box-shadow: -4px 4px 0 $theme03;
 
     &:hover {
-      background: $blue02;
-      box-shadow: -3px 3px 0 $accent;
+      color: $theme01;
+      background: $theme03;
+      box-shadow: -4px 4px 0 $theme01;
     }
   }
 
@@ -57,5 +58,5 @@ span.stroke {
   height: 3px;
   width: 32px;
 
-  background: $blue02;
+  background: $theme05;
 }
