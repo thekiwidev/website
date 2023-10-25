@@ -16,11 +16,11 @@
   box-sizing: border-box;
 
   text-decoration: none;
-  font-family: "Karla", "Poppins", "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Karla", Arial, Helvetica, sans-serif;
 
   scroll-behavior: smooth;
   max-width: 100%;
-  cursor: none;
+  // cursor: none;
 }
 // scroolbar
 ::-webkit-scrollbar {
@@ -329,8 +329,9 @@ body {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-evenly;
-      gap: 3rem;
+      // justify-content: space-evenly;
+      justify-content: center;
+      gap: 1.4rem;
 
       .card {
         width: 400px;
@@ -438,6 +439,8 @@ body {
             color: $theme05;
 
             transition: 0.5s all ease;
+
+            padding: 1rem 0;
 
             &:hover {
               text-decoration: underline;
@@ -780,6 +783,21 @@ body {
         }
       }
 
+      .texts {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+          flex: 0.5;
+        }
+
+        p {
+          flex: 0.3;
+          color: $theme05;
+        }
+      }
+
       .content {
         margin-top: 4rem;
 
@@ -977,6 +995,10 @@ body {
             }
           }
         }
+      }
+
+      .copyright-section {
+        border-top: 1px solid $theme05;
       }
     }
   }
