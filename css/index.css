@@ -61,6 +61,7 @@
   outline: none;
   padding: 0.8rem 2.2rem;
   text-transform: capitalize;
+  cursor: pointer;
   transition: 0.5s all ease;
   font-weight: 900;
 }
@@ -160,10 +161,9 @@ p {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Karla", "Poppins", "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Karla", Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   max-width: 100%;
-  cursor: none;
 }
 
 ::-webkit-scrollbar {
@@ -427,8 +427,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 3rem;
+  justify-content: center;
+  gap: 1.4rem;
 }
 .wrapper section.services .cards .card {
   width: 400px;
@@ -526,6 +526,7 @@ body {
   font-weight: 600;
   color: #909090;
   transition: 0.5s all ease;
+  padding: 1rem 0;
 }
 .wrapper section.products .container .grid-container .product a:hover {
   text-decoration: underline;
@@ -852,6 +853,18 @@ body {
     text-align: center;
   }
 }
+.wrapper section.contact-us .container .texts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper section.contact-us .container .texts h2 {
+  flex: 0.5;
+}
+.wrapper section.contact-us .container .texts p {
+  flex: 0.3;
+  color: #909090;
+}
 .wrapper section.contact-us .container .content {
   margin-top: 4rem;
   display: flex;
@@ -1025,4 +1038,7 @@ body {
 .wrapper footer .container .bottom-content .useful-links .links-container .links a:hover {
   -webkit-text-decoration: underline #f7f7ff;
           text-decoration: underline #f7f7ff;
+}
+.wrapper footer .container .copyright-section {
+  border-top: 1px solid #909090;
 }/*# sourceMappingURL=index.css.map */
