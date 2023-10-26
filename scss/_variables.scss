@@ -32,16 +32,43 @@ $container-max-widths-lg: 960px;
 $container-max-widths-md: 720px;
 $container-max-widths-: 540px;
 
-$blue01: #4ea5d9;
-$blue02: #0b2432;
-$dark: #0f161b;
-$light: #f7f7ff;
-$accent: #fcc78b;
-
 // ! themes:
 
-$theme01: #0b0b0b;
+:root {
+  --theme-black: #0f0f0f;
+  --theme-dark: #1d1d1d;
+  --theme-gray: #909090;
+  --theme-light: #e0e0e0;
+  --theme-white: #f9f9f9;
+  --theme-accent: #ff9900;
+}
+
+.logo-light {
+  display: none;
+}
+
+$theme01: #0f0f0f;
 $theme02: #1d1d1d;
 $theme03: #e0e0e0;
 $theme04: #f9f9f9;
 $theme05: #909090;
+$accent: #ff9900;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-black: #f9f9f9;
+    --theme-dark: #e0e0e0;
+    --theme-gray: #909090;
+    --theme-light: #1d1d1d;
+    --theme-white: #0f0f0f;
+    --theme-accent: #ff9900;
+  }
+
+  .logo-dark {
+    display: none;
+  }
+
+  .logo-light {
+    display: block;
+  }
+}

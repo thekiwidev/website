@@ -12,51 +12,47 @@
   font-weight: 900;
 
   &.primary-btn {
-    background: $theme03;
-    border: 1px solid $theme03;
+    background: var(--theme-accent);
+    border: 1px solid var(--theme-black);
 
-    color: $theme01;
+    color: var(--theme-white);
     font-weight: 800;
 
     position: relative;
     overflow: hidden;
 
-    box-shadow: -5px 5px 0 $theme05;
+    box-shadow: -5px 5px 0 var(--theme-gray);
     transition: all 0.2s linear !important;
 
     &:hover {
-      background: $theme02;
-      color: $theme04;
-      box-shadow: -3px 3px 0 $theme03;
+      background: var(--theme-light);
+      color: var(--theme-black);
+      box-shadow: -3px 3px 0 var(--theme-dark);
     }
   }
 
   &.secondary-btn {
-    border: 1px solid $theme01;
+    border: 1px solid var(--theme-light);
 
-    background: $theme02;
-    color: $theme04;
+    background: var(--theme-light);
+    color: var(--theme-dark);
 
     position: relative;
     overflow: hidden;
 
-    box-shadow: -4px 4px 0 $theme03;
+    box-shadow: -4px 4px 0 var(--theme-black);
 
     &:hover {
-      color: $theme01;
-      background: $theme03;
-      box-shadow: -4px 4px 0 $theme01;
+      color: var(--theme-white);
+      background: var(--theme-dark);
+      box-shadow: -2px 2px 0 var(--theme-accent);
     }
   }
-
-  // &:hover {
-  //   cursor: pointer;
-  // }
 }
 
 span.stroke {
   height: 3px;
   width: 32px;
 
-  background: $theme05;
+  background: $accent;
 }
