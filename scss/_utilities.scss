@@ -40,12 +40,12 @@
     position: relative;
     overflow: hidden;
 
-    box-shadow: -4px 4px 0 var(--theme-dark);
+    box-shadow: -4px 4px 0 var(--theme-black);
 
     &:hover {
       color: var(--theme-white);
       background: var(--theme-dark);
-      box-shadow: -3px 3px 0 var(--theme-white);
+      box-shadow: -2px 2px 0 var(--theme-accent);
     }
   }
 }
