@@ -21,13 +21,13 @@
     position: relative;
     overflow: hidden;
 
-    box-shadow: -5px 5px 0 var(--theme-gray);
+    box-shadow: -5px 5px 0 var(--theme-dark);
     transition: all 0.2s linear !important;
 
     &:hover {
       background: var(--theme-light);
       color: var(--theme-black);
-      box-shadow: -3px 3px 0 var(--theme-dark);
+      box-shadow: -3px 3px 0 var(--theme-black);
     }
   }
 

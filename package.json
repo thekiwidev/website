@@ -1,0 +1,23 @@
+{
+  "name": "kandaville",
+  "version": "1.0.0",
+  "description": "A website for kandaville",
+  "main": "js/main.js",
+  "scripts": {
+    "build": "yarn && gulp build"
+  },
+  "repository": "https://github.com/thekiwidev/website.git",
+  "author": "thekiwidev <adedotungabriel20@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.69.5"
+  }
+}
