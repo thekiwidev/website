@@ -1,0 +1,9 @@
+node_modules
+yarn.lock
+build
+./build/assets/**/*
+./build/assets/**/*.{jpg,png,gif,svg}
+
+# firebase.json
+
+**/node_modules/**

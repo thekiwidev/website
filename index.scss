@@ -283,6 +283,11 @@ body {
 
           margin: 2.5rem 0;
 
+          span {
+            color: var(--theme-accent);
+            font-weight: 600;
+          }
+
           @media only screen and (max-width: 850px) {
             width: 80%;
           }
