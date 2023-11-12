@@ -51,6 +51,18 @@
               />
             </a>
             <nav>
+              <a href="./" class="logo">
+                <img
+                  src="./assets/icons/logo-full-white.svg"
+                  alt="logo"
+                  class="logo-light"
+                />
+                <img
+                  src="./assets/icons/logo-full-black.svg"
+                  alt="logo"
+                  class="logo-dark"
+                />
+              </a>
               <ul class="navlinks">
                 <a href="#services">services</a>
                 <a href="#catalog">catalog</a>
@@ -419,33 +431,49 @@
 
             <div class="form">
               <form>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Full name"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Eamil"
-                  required
-                />
-                <input
-                  type="number"
-                  name="number"
-                  id="number"
-                  placeholder="Phone Number"
-                  required
-                />
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="What's on your mind 🤔"
-                  required
-                ></textarea>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    placeholder=""
+                  />
+                  <label for="name">Enter your name</label>
+                </div>
+
+                <div class="input-wrapper">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    placeholder=""
+                  />
+                  <label for="email">Email</label>
+                </div>
+
+                <div class="input-wrapper">
+                  <input
+                    type="number"
+                    name="number"
+                    id="number"
+                    required
+                    placeholder=""
+                  />
+                  <label for="number">Phone Number</label>
+                </div>
+
+                <div class="input-wrapper">
+                  <textarea
+                    name="message"
+                    id="message"
+                    required
+                    placeholder=""
+                  ></textarea>
+                  <label for="message">What's on your mind 🤔</label>
+                </div>
+
                 <button class="btn primary-btn">send</button>
               </form>
             </div>

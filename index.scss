@@ -65,6 +65,8 @@ body {
 
   header.main-header {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
 
     background-color: var(--theme-white);
@@ -72,6 +74,22 @@ body {
     z-index: 5;
 
     padding: 1rem 0;
+
+    &.fixed {
+      position: fixed;
+      box-shadow: 0 4px 16px #0000005b;
+
+      animation: fix 0.3s ease-in-out;
+
+      @keyframes fix {
+        from {
+          top: -100px;
+        }
+        to {
+          top: 0;
+        }
+      }
+    }
 
     .content {
       display: flex;
@@ -95,7 +113,7 @@ body {
 
         user-select: none;
 
-        z-index: 1;
+        // z-index: 1;
 
         @media only screen and (max-width: 850px) {
           flex: 1;
@@ -109,6 +127,19 @@ body {
       nav {
         flex: 3;
 
+        position: relative;
+
+        .logo {
+          display: none;
+
+          @media only screen and (max-width: 850px) {
+            display: block;
+            position: absolute;
+            top: 3%;
+            left: 1rem;
+          }
+        }
+
         @media only screen and (max-width: 1024px) {
           flex: 5;
         }
@@ -116,19 +147,46 @@ body {
           transition: right 0.3s ease-in-out;
           flex-direction: column;
 
-          position: absolute;
-          width: 100%;
-          right: -100%;
+          position: fixed;
+          width: 85%;
+          height: 100vh;
           top: 0;
+          left: 0;
+
+          transform: translateX(-100%);
 
           padding: 10rem 1rem 5rem;
 
-          height: 100vh;
-
           background: var(--theme-white);
 
+          transition: transform 0.2s ease-in-out;
+
           &.open {
-            right: 0;
+            transform: translateX(0);
+
+            &::before {
+              position: absolute;
+              top: 0;
+              right: -17%;
+
+              content: "";
+              width: 17%;
+              height: 100%;
+              background-color: #f9f9f970;
+              @media (prefers-color-scheme: dark) {
+                background-color: #0f0f0f70;
+              }
+              backdrop-filter: blur(5px);
+              z-index: -2;
+
+              pointer-events: none;
+            }
+          }
+
+          button {
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 900;
           }
         }
 
@@ -183,7 +241,7 @@ body {
 
         transition: all 0.3s linear;
 
-        z-index: 5;
+        // z-index: 5;
 
         .stroke {
           width: 32px;
@@ -274,6 +332,10 @@ body {
           span {
             color: var(--theme-accent);
           }
+
+          @media only screen and (max-width: 850px) {
+            font-size: 3.5rem;
+          }
         }
 
         p {
@@ -355,14 +417,7 @@ body {
 
         padding: 4rem 3rem;
 
-        background: var(--theme-white);
-
-        @media (prefers-color-scheme: dark) {
-          background-color: var(--theme-black);
-
-          box-shadow: -4px 4px var(--theme-gray);
-          border: 1px solid var(--theme-gray);
-        }
+        background: #f9f9f91d;
 
         display: flex;
         flex-direction: column;
@@ -373,8 +428,18 @@ body {
         box-shadow: -4px 4px var(--theme-black);
         border: 1px solid var(--theme-black);
 
+        border-radius: 0.5rem;
+
+        @media (prefers-color-scheme: dark) {
+          background-color: var(--theme-black);
+
+          box-shadow: -4px 4px var(--theme-gray);
+          border: 1px solid var(--theme-white);
+        }
+
         @media only screen and (max-width: 850px) {
-          max-width: 500px;
+          // max-width: 500px;
+          width: 85%;
         }
 
         .img {
@@ -440,8 +505,9 @@ body {
           grid-template-columns: repeat(2, 1fr);
         }
 
-        @media only screen and (max-width: 500px) {
-          grid-template-columns: repeat(1, 1fr);
+        @media only screen and (max-width: 750px) {
+          display: flex;
+          flex-direction: column;
         }
 
         .product {
@@ -451,6 +517,8 @@ body {
           border: 1px solid var(--theme-black);
 
           background-color: var(--theme-white);
+
+          border-radius: 1rem;
 
           @media (prefers-color-scheme: dark) {
             background-color: var(--theme-black);
@@ -466,13 +534,26 @@ body {
 
           .img {
             margin-bottom: 1rem;
+
+            img {
+              border-top-right-radius: 0.5rem;
+              border-top-left-radius: 0.5rem;
+            }
           }
           h4 {
             margin-bottom: 1rem;
+            color: var(--theme-black);
+
+            @media (prefers-color-scheme: dark) {
+              color: var(--theme-white);
+            }
           }
           p {
             b {
               color: var(--theme-black);
+              @media (prefers-color-scheme: dark) {
+                color: var(--theme-white);
+              }
             }
           }
           a {
@@ -496,6 +577,8 @@ body {
               margin: 0;
               height: 100%;
               object-fit: cover;
+
+              border-radius: 0.5rem;
             }
 
             @media only screen and (max-width: 850px) {
@@ -693,6 +776,8 @@ body {
 
         transition: 0.3s ease;
 
+        border-radius: 0.5rem;
+
         &:hover {
           background-color: var(--theme-black);
 
@@ -788,6 +873,8 @@ body {
       border: 1px solid var(--theme-light);
       box-shadow: -6px 6px 0 var(--theme-gray);
 
+      border-radius: 0.5rem;
+
       h3 {
         color: var(--theme-white);
       }
@@ -811,8 +898,11 @@ body {
           margin-bottom: 1.5rem;
         }
 
-        .primary-btn:hover {
-          box-shadow: -3px 3px 0 var(--theme-accent);
+        .primary-btn {
+          box-shadow: -3px 3px 0 var(--theme-light);
+          &:hover {
+            box-shadow: -3px 3px 0 var(--theme-accent);
+          }
         }
       }
     }
@@ -882,36 +972,86 @@ body {
             width: 100%;
           }
 
-          input,
-          textarea {
-            outline: none;
-
-            font-size: 1rem;
-            padding: 1rem 1rem;
-
-            display: block;
+          .input-wrapper {
             width: 80%;
             margin-inline: auto;
+
+            position: relative;
             margin-bottom: 1rem;
-
-            border: 1px solid var(--theme-gray);
-            box-shadow: -4px 4px 0 var(--theme-dark);
-
-            transition: 0.2s all;
 
             @media only screen and (max-width: 850px) {
               width: 100%;
             }
 
-            &:focus {
-              border-color: var(--theme-accent);
-              box-shadow: -2px 2px 0 var(--theme-accent);
-            }
-          }
+            label {
+              position: absolute;
+              top: 50%;
+              left: 1rem;
+              transform: translate(0, -50%);
+              transition: top 0.2s ease, font-size 0.2s ease;
 
-          textarea {
-            height: 150px;
-            resize: none;
+              line-height: 1;
+              color: var(--theme-gray);
+            }
+
+            input::not(:placeholder-shown):not(:focus) + label {
+              top: 20px;
+              font-size: 0.8em;
+              pointer-events: none;
+            }
+
+            textarea + label {
+              top: 20%;
+            }
+
+            input,
+            textarea {
+              outline: none;
+
+              font-size: 1rem;
+              padding: 1.5rem 1rem 1rem;
+
+              display: block;
+              width: 100%;
+              margin-inline: auto;
+
+              color: var(--theme-black);
+
+              border: 1px solid var(--theme-gray);
+              background: var(--theme-white);
+
+              font-weight: 500;
+
+              border-radius: 0.5rem;
+
+              transition: 0.2s all;
+
+              @media only screen and (max-width: 850px) {
+                width: 100%;
+              }
+
+              &::not(:empty) + label {
+                top: 20px;
+                font-size: 0.8em;
+                pointer-events: none;
+              }
+
+              &:focus {
+                border-color: var(--theme-accent);
+              }
+
+              &:focus + label,
+              &:not(:placeholder-shown) + label {
+                top: 1rem;
+                font-weight: 500;
+                font-size: 0.8rem;
+              }
+            }
+
+            textarea {
+              height: 150px;
+              resize: none;
+            }
           }
 
           button {
@@ -955,6 +1095,26 @@ body {
         padding-bottom: 3rem;
         border-bottom: 1px solid $gray-500;
 
+        .primary-btn {
+          box-shadow: -3px 3px 0 var(--theme-light);
+          color: var(--theme-black);
+          font-weight: bold;
+
+          &:hover {
+            box-shadow: -3px 3px 0 var(--theme-accent);
+          }
+        }
+
+        .secondary-btn {
+          box-shadow: -3px 3px 0 var(--theme-gray);
+
+          font-weight: bold;
+
+          &:hover {
+            box-shadow: -3px 3px 0 var(--theme-accent);
+          }
+        }
+
         @media only screen and (max-width: 850px) {
           flex-direction: column;
           gap: 5rem;
@@ -978,6 +1138,12 @@ body {
         .call-to-action {
           .primary-btn {
             margin-right: 1.5rem;
+
+            box-shadow: -5px 5px 0 var(--theme-white);
+
+            @media (prefers-color-scheme: dark) {
+              box-shadow: -5px 5px 0 var(--theme-dark);
+            }
           }
 
           @media only screen and (max-width: 650px) {
@@ -1046,10 +1212,11 @@ body {
           .links-container {
             display: flex;
             flex-direction: column;
+            align-items: start;
             margin-bottom: 5rem;
             width: 44.5%;
 
-            @media only screen and (max-width: 500px) {
+            @media only screen and (max-width: 850px) {
               width: 100%;
 
               &:last-of-type {
@@ -1061,6 +1228,8 @@ body {
               color: var(--theme-white);
               text-transform: capitalize;
               font-size: 1.1rem;
+
+              padding: 1rem;
 
               margin-bottom: 1.5rem;
 
@@ -1074,6 +1243,9 @@ body {
                 display: block;
                 color: $gray-500;
                 padding: 0.2rem 0;
+
+                padding: 0.5rem 1rem;
+                margin: 0.5rem 0;
 
                 text-transform: capitalize;
 
