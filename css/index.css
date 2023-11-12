@@ -411,6 +411,7 @@ body {
   right: 3%;
   padding: 1rem;
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 .wrapper header.main-header .content button.menu .stroke {
   width: 32px;
@@ -1123,7 +1124,7 @@ body {
 .wrapper section.contact-us .container .content .form .input-wrapper textarea {
   outline: none;
   font-size: 1rem;
-  padding: 1.5rem 1rem 1rem;
+  padding: 1.5rem 1rem 0.6rem;
   display: block;
   width: 100%;
   margin-inline: auto;
