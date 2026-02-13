@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+  --color-primary: #2b8cee;
+  --color-background-light: #f6f7f8;
+  --color-background-dark: #101922;
+  --color-neutral-dark: #1a242f;
+  --color-neutral-border: #2d3b4d;
+}
+
+@utility grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(43, 140, 238, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(43, 140, 238, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@utility scanline {
+  width: 100%;
+  height: 2px;
+  background: rgba(43, 140, 238, 0.1);
+  position: absolute;
+  z-index: 10;
+}
+
+@utility grid-pattern {
+  background-image: radial-gradient(circle, rgba(43, 140, 238, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@utility code-block {
+  font-family: var(--font-mono);
+}
+
+@utility instrument-border {
+  border: 1px solid rgba(43, 140, 238, 0.2);
+}
+
+@utility glass-panel {
+  background: rgba(16, 25, 34, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@utility timeline-line {
+  background: linear-gradient(to bottom, transparent, #2b8cee 15%, #2b8cee 85%, transparent);
+}
+
+@utility skill-node {
+  &:hover {
+    box-shadow: 0 0 15px rgba(43, 140, 238, 0.3);
+  }
+}
+
+@utility popover-reveal {
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+@utility role-card {
+  &:hover .popover-reveal {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar { width: 4px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: #2d3b4d; border-radius: 10px; }
+}
+
+@utility editorial-content {
+  p { margin-bottom: 1.5rem; line-height: 1.75; color: #cbd5e1; }
+}
+
+:root {
+  --background: #f6f7f8;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #101922;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  scrollbar-width: thin;
+  scrollbar-color: #2b8cee #101922;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+  animation: marquee 20s linear infinite;
+}
